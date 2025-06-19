@@ -1,0 +1,254 @@
+[
+    {
+        "from-date": "2022-01-01",
+        "to-date": "2022-01-31",
+        "consumption": 1,
+        "category": "actual"
+    },
+    {
+        "from-date": "2022-02-01",
+        "to-date": "2022-02-28",
+        "consumption": 2,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2022-03-01",
+        "to-date": "2022-03-31",
+        "consumption": 3,
+        "category": "actual"
+    },
+    {
+        "from-date": "2022-04-01",
+        "to-date": "2022-04-30",
+        "consumption": 4,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2022-05-01",
+        "to-date": "2022-05-31",
+        "consumption": 5,
+        "category": "actual"
+    },
+    {
+        "from-date": "2022-06-01",
+        "to-date": "2022-06-30",
+        "consumption": 6,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2022-07-01",
+        "to-date": "2022-07-31",
+        "consumption": 7,
+        "category": "actual"
+    },
+    {
+        "from-date": "2022-08-01",
+        "to-date": "2022-08-31",
+        "consumption": 8,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2022-09-01",
+        "to-date": "2022-09-30",
+        "consumption": 9,
+        "category": "actual"
+    },
+    {
+        "from-date": "2022-10-01",
+        "to-date": "2022-10-31",
+        "consumption": 10,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2022-11-01",
+        "to-date": "2022-11-30",
+        "consumption": 1,
+        "category": "actual"
+    },
+    {
+        "from-date": "2022-12-01",
+        "to-date": "2022-12-31",
+        "consumption": 2,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2023-01-01",
+        "to-date": "2023-01-31",
+        "consumption": 3,
+        "category": "actual"
+    },
+    {
+        "from-date": "2023-02-01",
+        "to-date": "2023-02-28",
+        "consumption": 4,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2023-03-01",
+        "to-date": "2023-03-31",
+        "consumption": 5,
+        "category": "actual"
+    },
+    {
+        "from-date": "2023-04-01",
+        "to-date": "2023-04-30",
+        "consumption": 6,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2023-05-01",
+        "to-date": "2023-05-31",
+        "consumption": 7,
+        "category": "actual"
+    },
+    {
+        "from-date": "2023-06-01",
+        "to-date": "2023-06-30",
+        "consumption": 8,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2023-07-01",
+        "to-date": "2023-07-31",
+        "consumption": 9,
+        "category": "actual"
+    },
+    {
+        "from-date": "2023-08-01",
+        "to-date": "2023-08-31",
+        "consumption": 10,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2023-09-01",
+        "to-date": "2023-09-30",
+        "consumption": 1,
+        "category": "actual"
+    },
+    {
+        "from-date": "2023-10-01",
+        "to-date": "2023-10-31",
+        "consumption": 2,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2023-11-01",
+        "to-date": "2023-11-30",
+        "consumption": 3,
+        "category": "actual"
+    },
+    {
+        "from-date": "2023-12-01",
+        "to-date": "2023-12-31",
+        "consumption": 4,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2024-01-01",
+        "to-date": "2024-01-31",
+        "consumption": 5,
+        "category": "actual"
+    },
+    {
+        "from-date": "2024-02-01",
+        "to-date": "2024-02-29",
+        "consumption": 6,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2024-03-01",
+        "to-date": "2024-03-31",
+        "consumption": 7,
+        "category": "actual"
+    },
+    {
+        "from-date": "2024-04-01",
+        "to-date": "2024-04-30",
+        "consumption": 8,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2024-05-01",
+        "to-date": "2024-05-31",
+        "consumption": 9,
+        "category": "actual"
+    },
+    {
+        "from-date": "2024-06-01",
+        "to-date": "2024-06-30",
+        "consumption": 10,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2024-07-01",
+        "to-date": "2024-07-31",
+        "consumption": 1,
+        "category": "actual"
+    },
+    {
+        "from-date": "2024-08-01",
+        "to-date": "2024-08-31",
+        "consumption": 2,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2024-09-01",
+        "to-date": "2024-09-30",
+        "consumption": 3,
+        "category": "actual"
+    },
+    {
+        "from-date": "2024-10-01",
+        "to-date": "2024-10-31",
+        "consumption": 4,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2024-11-01",
+        "to-date": "2024-11-30",
+        "consumption": 5,
+        "category": "actual"
+    },
+    {
+        "from-date": "2024-12-01",
+        "to-date": "2024-12-31",
+        "consumption": 6,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2025-01-01",
+        "to-date": "2025-01-31",
+        "consumption": 7,
+        "category": "actual"
+    },
+    {
+        "from-date": "2025-02-01",
+        "to-date": "2025-02-28",
+        "consumption": 8,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2025-03-01",
+        "to-date": "2025-03-31",
+        "consumption": 9,
+        "category": "actual"
+    },
+    {
+        "from-date": "2025-04-01",
+        "to-date": "2025-04-30",
+        "consumption": 10,
+        "category": "estimated"
+    },
+    {
+        "from-date": "2025-05-01",
+        "to-date": "2025-05-31",
+        "consumption": 1,
+        "category": "actual"
+    },
+    {
+        "from-date": "2025-06-01",
+        "to-date": "2025-06-30",
+        "consumption": 2,
+        "category": "estimated"
+    }
+]

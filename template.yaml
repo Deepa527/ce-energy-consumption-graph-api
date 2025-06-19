@@ -1,0 +1,34 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+
+Resources:
+  MyApiGateway:
+    Type: AWS::Serverless::Api
+    Properties:
+      Name: bgb-energy-graph-api
+      StageName: prod
+      Auth:
+        DefaultAuthorizer: CognitoAuthorizer
+        AddDefaultAuthorizerToCorsPreflight: false
+        Authorizers:
+          CognitoAuthorizer:
+            UserPoolArn: arn:aws:cognito-idp:ap-south-1:730335550462:userpool/ap-south-1_qmPd7G9Xm
+            Identity:
+              ReauthorizeEvery: 0
+
+  MyLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: bgb-energy-consumption-graph
+      Handler: app.handler
+      Runtime: nodejs18.x
+      CodeUri: .
+      MemorySize: 128
+      Timeout: 5
+      Events:
+        ApiEvent:
+          Type: Api
+          Properties:
+            RestApiId: !Ref MyApiGateway
+            Path: /energy/{accountId}
+            Method: POST
