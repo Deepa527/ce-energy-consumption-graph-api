@@ -1,6 +1,21 @@
 const consumptionData = require('./consumptions.json');
 
 exports.handler = async (event) => {
+    const corsHeaders = {
+        "Access-Control-Allow-Origin": "*", // Replace with domain if needed
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Methods": "POST,OPTIONS"
+    };
+
+    // Handle OPTIONS preflight request
+    if (event.httpMethod === 'OPTIONS') {
+        return {
+            statusCode: 200,
+            headers: corsHeaders,
+            body: JSON.stringify({ message: 'CORS preflight handled' })
+        };
+    }
+
     const accountId = event.pathParameters?.accountId;
     const body = JSON.parse(event.body || '{}');
     const { fromDate, toDate } = body;
@@ -8,14 +23,13 @@ exports.handler = async (event) => {
     const username = event.requestContext?.authorizer?.claims?.['cognito:username'] || 'Unknown';
     console.log(`Request made by user: ${username}`);
 
-    console.log('event', event);
-    console.log('body', body);
     const from = new Date(fromDate);
     const to = new Date(toDate);
 
     if (isNaN(from.getTime()) || isNaN(to.getTime())) {
         return {
             statusCode: 400,
+            headers: corsHeaders,
             body: JSON.stringify({
                 message: "Invalid or missing 'fromDate' or 'toDate'."
             })
@@ -31,6 +45,7 @@ exports.handler = async (event) => {
 
     return {
         statusCode: 200,
+        headers: corsHeaders,
         body: JSON.stringify({
             message: "Filtered energy data retrieved successfully.",
             data: [

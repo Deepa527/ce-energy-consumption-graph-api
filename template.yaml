@@ -15,6 +15,10 @@ Resources:
             UserPoolArn: arn:aws:cognito-idp:ap-south-1:730335550462:userpool/ap-south-1_qmPd7G9Xm
             Identity:
               ReauthorizeEvery: 0
+      Cors:
+        AllowMethods: "'POST,OPTIONS'"
+        AllowHeaders: "'Content-Type,X-Amz-Date,Authorization,X-Api-Key'"
+        AllowOrigin: "'*'"
 
   MyLambdaFunction:
     Type: AWS::Serverless::Function
