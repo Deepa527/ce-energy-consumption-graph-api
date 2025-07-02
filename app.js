@@ -51,7 +51,7 @@ exports.handler = async (event) => {
         };
     }
 
-    if (to < minDate || to > maxDate) {
+    if (to < minDate) {
         return {
             statusCode: 400,
             headers: corsHeaders,
