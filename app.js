@@ -2,7 +2,7 @@ const consumptionData = require('./consumptions.json');
 
 exports.handler = async (event) => {
     const corsHeaders = {
-        "Access-Control-Allow-Origin": "*", // Replace with domain if needed
+        "Access-Control-Allow-Origin": "*",
         "Access-Control-Allow-Headers": "*",
         "Access-Control-Allow-Methods": "POST,OPTIONS"
     };
@@ -32,6 +32,31 @@ exports.handler = async (event) => {
             headers: corsHeaders,
             body: JSON.stringify({
                 message: "Invalid or missing 'fromDate' or 'toDate'."
+            })
+        };
+    }
+
+    // Date bounds
+    const minDate = new Date('2022-01-01');
+    const maxDate = new Date('2025-06-01');
+
+    // Individual date validation
+    if (from < minDate || from > maxDate) {
+        return {
+            statusCode: 400,
+            headers: corsHeaders,
+            body: JSON.stringify({
+                message: "'fromDate' must be between 2022-01-01 and 2025-06-01."
+            })
+        };
+    }
+
+    if (to < minDate || to > maxDate) {
+        return {
+            statusCode: 400,
+            headers: corsHeaders,
+            body: JSON.stringify({
+                message: "'toDate' must be between 2022-01-01 and 2025-06-01."
             })
         };
     }
