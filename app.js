@@ -7,7 +7,6 @@ exports.handler = async (event) => {
         "Access-Control-Allow-Methods": "POST,OPTIONS"
     };
 
-    // Handle OPTIONS preflight request
     if (event.httpMethod === 'OPTIONS') {
         return {
             statusCode: 200,
@@ -36,27 +35,26 @@ exports.handler = async (event) => {
         };
     }
 
-    // Date bounds
     const minDate = new Date('2022-01-01');
     const maxDate = new Date('2025-06-01');
 
-    // Individual date validation
-    if (from < minDate || from > maxDate) {
+    if (from > to) {
         return {
             statusCode: 400,
             headers: corsHeaders,
             body: JSON.stringify({
-                message: "'fromDate' must be between 2022-01-01 and 2025-06-01."
+                message: "'fromDate' must be before 'toDate'."
             })
-        };
+        }
     }
 
-    if (to < minDate) {
+
+    if (from < minDate || from > maxDate || to < minDate || to > maxDate) {
         return {
             statusCode: 400,
             headers: corsHeaders,
             body: JSON.stringify({
-                message: "'toDate' must be between 2022-01-01 and 2025-06-01."
+                message: "'Invalid date range selection. Please select the date between 01-01-2022 and 01-06-2025."
             })
         };
     }
