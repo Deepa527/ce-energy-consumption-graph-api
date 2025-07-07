@@ -49,7 +49,7 @@ exports.handler = async (event) => {
     }
 
 
-    if (from < minDate || from > maxDate || to < minDate || to > maxDate) {
+    if (from < minDate || from > maxDate || to < minDate) {
         return {
             statusCode: 400,
             headers: corsHeaders,
@@ -59,7 +59,6 @@ exports.handler = async (event) => {
         };
     }
 
-    // Filter based on date range
     const filtered = consumptionData.filter(item => {
         const itemFrom = new Date(item["from-date"]);
         const itemTo = new Date(item["to-date"]);
