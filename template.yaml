@@ -5,14 +5,14 @@ Resources:
   MyApiGateway:
     Type: AWS::Serverless::Api
     Properties:
-      Name: bgb-energy-graph-api
+      Name: ce-energy-graph-api
       StageName: prod
       Auth:
         DefaultAuthorizer: CognitoAuthorizer
         AddDefaultAuthorizerToCorsPreflight: false
         Authorizers:
           CognitoAuthorizer:
-            UserPoolArn: arn:aws:cognito-idp:ap-south-1:730335550462:userpool/ap-south-1_qmPd7G9Xm
+            UserPoolArn: arn:aws:cognito-idp:ap-south-1:091668454636:userpool/ap-south-1_B6chGHjU9
             Identity:
               ReauthorizeEvery: 0
       Cors:
@@ -23,7 +23,7 @@ Resources:
   MyLambdaFunction:
     Type: AWS::Serverless::Function
     Properties:
-      FunctionName: bgb-energy-consumption-graph
+      FunctionName: ce-energy-consumption-graph
       Handler: app.handler
       Runtime: nodejs18.x
       CodeUri: .
