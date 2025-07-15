@@ -22,6 +22,7 @@ exports.handler = async (event) => {
     const username = event.requestContext?.authorizer?.claims?.['cognito:username'] || 'Unknown';
     console.log(`Request made by user: ${username}`);
     console.log("username");
+    console.log("username");
 
     const from = new Date(fromDate);
     const to = new Date(toDate);
